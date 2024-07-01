@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+echo "== delete bucket"
+
+# Check if the first argument is provided
+if [ -z "$1" ]; then
+    echo "Needs a bucket name eg. ./bucket my-bucket-name"
+    exit 1
+fi
+
+BUCKET_NAME=$1
+
+#Put Documentation for this subject so you can look back when doing this
+ aws s3api delete-bucket \
+    --bucket $BUCKET_NAME \
+    --output text 
