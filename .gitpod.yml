@@ -1,10 +1,10 @@
 tasks:
-  #randmo utilites
+  # Random utilities
   - name: utils
-      before: |
-        sudo atp-get install -y tree
+    before: |
+      sudo apt-get install -y tree
   - name: aws-cli
-    env: 
+    env:
       AWS_CLI_AUTO_PROMPT: on-partial
     before: |
       cd /workspace
@@ -12,4 +12,5 @@ tasks:
       unzip awscliv2.zip
       sudo ./aws/install
       cd $THEIA_WORKSPACE_ROOT
+
 
