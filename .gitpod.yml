@@ -2,7 +2,7 @@ tasks:
   #randmo utilites
   - name: utils
       before: |
-        sudo atp-get install tree
+        sudo atp-get install -y tree
   - name: aws-cli
     env: 
       AWS_CLI_AUTO_PROMPT: on-partial
